@@ -1,5 +1,6 @@
 const countriesBoxArea = document.getElementById('all-countries-area');
-
+const infoCountryName = document.querySelector(".all-info #country-name");
+const infoFlag = document.querySelector(".all-info #flag");
 let code = ""
 var idName = '';
 fetch("https://restcountries.eu/rest/v2/all")
@@ -13,10 +14,11 @@ fetch("https://restcountries.eu/rest/v2/all")
         const countrycapital = document.createElement("h5");
         const viewDetailsBtn = document.createElement("button")
         viewDetailsBtn.innerText = "view Datails"
+        viewDetailsBtn.className = "view-datails"
         viewDetailsBtn.id = data[i].alpha2Code;
 
         countryName.innerText =data[i].name;
-        countrycapital.innerText = data[i].name
+        countrycapital.innerText = data[i].capital
 
         countriesBoxArea.appendChild(countriesbox);
         countriesbox.appendChild(countryName);
@@ -37,7 +39,7 @@ fetch("https://restcountries.eu/rest/v2/all")
           fetch(datailsUrl)
           .then(res => res.json())
           .then(data => {
-            console.log(data.name)
+            infoFlag.src = data.flag;
           })
 
       });

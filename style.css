@@ -22,12 +22,14 @@ nav h1{
 .card-lay{
     display: grid;
     grid-template-columns: 1fr 350px;
+    height:100vh;
 }
 #all-countries-area{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     border-right:2px solid dimgray;
+    overflow-x: auto;
 
 }
 .countries-box{
@@ -36,5 +38,28 @@ nav h1{
     margin:20px;
     background:#F5DCDC;
     padding:10px;
+
+}
+#flag{
+    width:80%;
+    padding-top:20px;
+    display:inherit;
+    margin:auto;
+}
+.view-datails {
+    border: none;
+    background: yellow;
+    padding: 10px 20px;
+    display: inherit;
+    margin-left: auto;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.view-datails:focus{
+    outline: none;
+}
+.view-datails:hover{
+    background:grey;
 
 }
