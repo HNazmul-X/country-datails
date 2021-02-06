@@ -1,0 +1,40 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+.top-space{
+    padding:27px;
+    display: inherit;
+}
+nav{
+    background:yellow;
+    text-align: center;
+    padding:10px;
+    position: fixed;
+    width: 100%;
+}
+nav h1{
+    color:dimgray;
+}
+.card-lay{
+    display: grid;
+    grid-template-columns: 1fr 350px;
+}
+#all-countries-area{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-right:2px solid dimgray;
+
+}
+.countries-box{
+    height:auto;
+    width:300px;
+    margin:20px;
+    background:#F5DCDC;
+    padding:10px;
+
+}
